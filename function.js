@@ -3,7 +3,7 @@ import { TinySegmenter } from "https://code4fukui.github.io/TinySegmenter/TinySe
 // The function here takes the parameters that you
 // have declared in the `glide.json` file, in the
 // same order.
-window.function = function (str) {
+window.function = async function (str) {
   // For each parameter, its `.value` contains
   // either its value in the type you've declared,
   // or it's `undefined`.  This is a good place to
