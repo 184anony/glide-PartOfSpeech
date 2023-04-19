@@ -7,8 +7,6 @@ window.function = async function (str) {
   // or it's `undefined`.  This is a good place to
   // extract the `.value`s and assign default
   // values.
-
-  import { TinySegmenter } from "https://code4fukui.github.io/TinySegmenter/TinySegmenter.js";
   const segs = TinySegmenter.segment(str);
 
   // Your function should return the exact type
