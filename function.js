@@ -1,5 +1,3 @@
-import { TinySegmenter } from "https://code4fukui.github.io/TinySegmenter/TinySegmenter.js";
-
 // The function here takes the parameters that you
 // have declared in the `glide.json` file, in the
 // same order.
@@ -10,6 +8,7 @@ window.function = async function (str) {
   // extract the `.value`s and assign default
   // values.
 
+  import { TinySegmenter } from "https://code4fukui.github.io/TinySegmenter/TinySegmenter.js";
   const segs = TinySegmenter.segment(str);
 
   // Your function should return the exact type
