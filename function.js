@@ -7,12 +7,12 @@ function test(str){
 		tokens = tokenizer.tokenize(str);// 解析データの取得
 
 		tokens.forEach( function(token,index,array) {
-			test += token.surface_form;
+			result += token.surface_form;
 			if(index != array.length-1){
-				test += ",";
+				result += ",";
 			}
 		});
-		console.log(test);
+		return result;
 	});
 }
 
