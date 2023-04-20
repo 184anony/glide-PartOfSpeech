@@ -6,13 +6,13 @@ function test(str){
 	
   kuromoji.builder({dicPath: DICT_PATH}).build((err, tokenizer)=>{
     tokens = tokenizer.tokenize(str);// 解析データの取得
-    token = tokens[0];
+    token = tokens[0].surface_form;
   });
 	
   if(token){
-    result = token.toString();
+    result = token;
   }else{
-    result = "だめぽ";
+    result = "むりぽ";
   }
 	
   return result;
