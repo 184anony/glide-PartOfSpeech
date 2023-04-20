@@ -1,5 +1,7 @@
-window.function = function (str) {
+//window.function = function (str) {
   
+  function test(str){
+	  
   const DICT_PATH = "./dict";
   let tokens;
 
