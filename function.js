@@ -1,21 +1,19 @@
 function test(str){
-  const DICT_PATH = "./dict";
-  let tokens;
-  let token;
-  let result;
-	
-  kuromoji.builder({dicPath: DICT_PATH}).build((err, tokenizer)=>{
-    tokens = tokenizer.tokenize(str);// 解析データの取得
-    token = tokens[0].surface_form;
-  });
-	
-  if(token){
-    result = token;
-  }else{
-    result = "むりぽ";
-  }
-	
-  return result;
+	const DICT_PATH = "./dict";
+	let tokens;
+	let result = "";
+
+	kuromoji.builder({dicPath: DICT_PATH}).build((err, tokenizer)=>{
+		tokens = tokenizer.tokenize(str);// 解析データの取得
+
+		tokens.forEach( function(token,index,array) {
+			test += token.surface_form;
+			if(index != array.length-1){
+				test += ",";
+			}
+		});
+		console.log(test);
+	});
 }
 
 window.function = function (str) {
