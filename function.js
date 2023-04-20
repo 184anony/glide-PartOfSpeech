@@ -2,11 +2,9 @@ function test(str){
   const DICT_PATH = "./dict";
 	
   kuromoji.builder({dicPath: DICT_PATH}).build((err, tokenizer)=>{
-    const tokens = tokenizer.tokenize(str);// 解析データの取得
+    return tokenizer.tokenize(str);// 解析データの取得
     
   });
-	
-  return tokens;
 }
 
 window.function = function (str) {
