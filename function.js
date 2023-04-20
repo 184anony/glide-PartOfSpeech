@@ -1,8 +1,8 @@
-function test(str){
-	const DICT_PATH = "./dict";
-	let tokens;
-	let result = "";
+const DICT_PATH = "./dict";
+let tokens;
+let result = "";
 
+function test(str){
 	kuromoji.builder({dicPath: DICT_PATH}).build((err, tokenizer)=>{
 		tokens = tokenizer.tokenize(str);// 解析データの取得
 
