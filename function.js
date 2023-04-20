@@ -6,7 +6,7 @@ function test(str){
     
   });
 	
-  return "yes";
+  return tokens;
 }
 
 window.function = function (str) {
